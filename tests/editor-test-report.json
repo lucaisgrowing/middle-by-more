@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "version": "0.5.0",
+  "brand": "middleshoooot by more",
+  "export": {
+    "w": 800,
+    "h": 530,
+    "pixel": [
+      0,
+      0,
+      0,
+      255
+    ]
+  },
+  "checks": [
+    "rectangle, arrow, freehand, text",
+    "opaque redaction pixel verified",
+    "undo / redo / history branch",
+    "coordinate mapping at 50% zoom",
+    "crop retains prior marks",
+    "crop undo/redo",
+    "flattened PNG download",
+    "layout discard confirmation and cancel",
+    "independent segment edits and history",
+    "reset and undo reset",
+    "clear removes local original",
+    "no page errors"
+  ],
+  "limitations": [
+    "Synthetic image in actual Chromium extension page; not user Mac or live chat website",
+    "Edits are held in result page memory and not persisted on refresh"
+  ]
+}

@@ -1,14 +1,14 @@
 {
   "manifest_version": 3,
-  "name": "middle by more",
-  "version": "0.4.0",
-  "description": "手动滚动聊天区，停稳自动截图，完成后拼接；两侧不重复。内置操作指引，本机处理。",
+  "name": "middleshoooot by more",
+  "version": "0.5.0",
+  "description": "手动滚动拼接聊天长截图，自动清理浮层；支持裁剪、箭头、文字、画笔与隐私遮挡，全程本机处理。",
   "permissions": [
     "activeTab",
     "scripting"
   ],
   "action": {
-    "default_title": "middle by more · 选择区域并长截图",
+    "default_title": "middleshoooot by more · 选择区域并长截图",
     "default_popup": "popup.html"
   },
   "background": {
