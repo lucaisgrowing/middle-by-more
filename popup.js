@@ -1,0 +1,2 @@
+const button=document.querySelector('#select');
+button.onclick=async()=>{button.disabled=true;try{const [tab]=await chrome.tabs.query({active:true,currentWindow:true});if(!tab?.id||!/^https?:|^file:/.test(tab.url||''))throw Error('请在普通网页打开；Chrome 设置页和商店页不能截图。');await chrome.scripting.executeScript({target:{tabId:tab.id},files:['stitch.js','noise.js','content.js']});window.close()}catch(e){document.querySelector('#status').textContent=e.message;button.disabled=false}};

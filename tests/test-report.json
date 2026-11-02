@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "version": "0.4.0",
+  "captureFrames": 16,
+  "automaticBottomAvoidance": 88,
+  "info": "Middle 测试 · 三栏聊天 · 735 × 7062 px · 16 屏。仅包含选中的中间区域。 图片仅保存在扩展本机存储中，请用完清除。",
+  "canvases": [
+    {
+      "w": 735,
+      "h": 7062
+    }
+  ],
+  "sentinelPixels": 0,
+  "checks": [
+    "real toolbar / activeTab grant",
+    "real chrome.tabs.captureVisibleTab",
+    "manual waiting",
+    "explicit pause locks position; continue resumes",
+    "pause notice before capture; ready after stored capture",
+    "real wheel jump clamped with overlap; wheel blocked while paused",
+    "fixed composer auto-cropped",
+    "fixed jump button absent from stitched pixels",
+    "inline message badges and See more controls absent from stitched pixels",
+    "UI styles restored after capture",
+    "new controls inserted mid-capture detected",
+    "normal prose preserved by classifier",
+    "opt-out retains inline badges in real capture",
+    "PNG download",
+    "sidebars once",
+    "no page errors",
+    "clear deletes local run"
+  ]
+}

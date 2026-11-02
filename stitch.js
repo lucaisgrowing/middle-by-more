@@ -1,0 +1,3 @@
+// Positions are sorted: manual scrolling may go up, revisit, or begin halfway down.
+function planFrames(frames){if(!frames.length)return [];const ordered=frames.map((f,index)=>({f,index})).sort((a,b)=>a.f.scrollTop-b.f.scrollTop||b.index-a.index);const origin=ordered[0].f.scrollTop;let end=0;const plan=[];for(const {f,index} of ordered){const start=f.scrollTop-origin;if(start>end+1)throw Error('截图之间有空档，请返回原页面向回滚动补齐，再点「完成并拼接」。');const cut=Math.max(0,end-start),height=Math.max(0,f.clip.height-cut);if(height>0)plan.push({index,dest:start+cut,cut,height});end=Math.max(end,start+f.clip.height)}return plan}
+if(typeof module!=='undefined')module.exports={planFrames};

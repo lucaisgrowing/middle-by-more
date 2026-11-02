@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "middle by more",
+  "version": "0.4.0",
+  "description": "手动滚动聊天区，停稳自动截图，完成后拼接；两侧不重复。内置操作指引，本机处理。",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_title": "middle by more · 选择区域并长截图",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
+      }
+    }
+  }
+}

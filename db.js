@@ -1,0 +1,4 @@
+function openDB(){return new Promise((resolve,reject)=>{const r=indexedDB.open('middle-captures',1);r.onupgradeneeded=()=>r.result.createObjectStore('runs',{keyPath:'id'});r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)})}
+async function putRun(run){const db=await openDB();try{await new Promise((resolve,reject)=>{const tx=db.transaction('runs','readwrite');tx.objectStore('runs').put(run);tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error)})}finally{db.close()}}
+async function getRun(id){const db=await openDB();try{return await new Promise((resolve,reject)=>{const r=db.transaction('runs').objectStore('runs').get(id);r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)})}finally{db.close()}}
+async function clearRun(id){const db=await openDB();try{await new Promise((resolve,reject)=>{const tx=db.transaction('runs','readwrite');tx.objectStore('runs').delete(id);tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error)})}finally{db.close()}}
